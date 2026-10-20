@@ -1,0 +1,27 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'io.mapperr.tsk'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'io.mapperr.tsk'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // In-app Git: no Termux, system git binary, GitHub API, or cloud account required.
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:6.10.0.202406032230-r'
+    implementation 'org.slf4j:slf4j-nop:1.7.36'
+}
